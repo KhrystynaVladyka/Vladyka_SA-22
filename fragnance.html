@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ariana Grande</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sidr.dark.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/sidr.js"></script>
+</head>
+<body class="otherpage">
+    <header>
+        <div class="nav">
+            <div class="mob-header-menu">
+                <a id="mob-menu" href="#sidr"><img src="images/mob-menu.png" /></a>
+                <span><a href="index.html#top">Ariana Grande</a></span>
+            </div>
+            <div id="sidr">
+                <ul>
+                    <li><a href="index.html#about">About us</a></li>
+                    <li><a href="index.html#events">Events</a></li>
+                    <li><a href="index.html#albums">Albums </a></li>
+                    <li>
+                        <a href="music.html">Shop</a>
+                        <ul>
+                            <li><a href="music.html" title="Music">Music</a></li>
+                            <li><a href="clothes.html" title="Clothes">Clothes</a></li>
+                            <li><a href="fragnance.html" title="Fragnance">Fragrance</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index.html#contact">Contact us</a></li>
+                </ul>
+            </div>
+            <div id="menu">
+                <div class="menu-item"><a href="#top" onclick="slowScroll('#top')">Ariana Grande</a></div>
+                <div class="menu-item">
+                    <a href="index.html#about" title="About us" onclick="slowScroll('#about')">About us</a>
+                </div>
+                <div class="menu-item">
+                    <a href="index.html#events" title="Events" onclick="slowScroll('#events')">Events</a>
+                </div>
+                <div class="menu-item">
+                    <a href="index.html#albums" title="Albums" onclick="slowScroll('#albums')">Albums</a>
+                </div>
+                <div class="menu-item">
+                    <a href="music.html" title="Shop" onclick="slowScroll('#shop')">
+                        Shop
+                    </a>
+                    <ul class="dropdownmenu">
+                        <li><a href="music.html" title="Music">Music</a></li>
+                        <li><a href="clothes.html" title="Clothes">Clothes</a></li>
+                        <li><a href="fragnance.html" title="Fragnance">Fragrance</a></li>
+                    </ul>
+
+                </div>
+                <div class="menu-item">
+                    <a href="index.html#contact" title="Contact us" onclick="slowScroll('#contact')">Contact us</a>
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <main>
+        <div class="fragnance">
+            <h2>Fragnance</h2>
+            <ul>
+                <li class="fragn1">
+                    <div>
+                        <img src="images/fragn1.png" />
+                        <span>thank u, next 30ml<br />$42.00</span>
+                        <a href="https://arianagrandefragrances.com/products/thank-u-next?variant=31723760451632">Buy now</a>
+                    </div>
+                </li>
+                <li class="fragn2">
+                    <div>
+                        <img src="images/fragn2.png" />
+                        <span>Cloud 30ml<br />$42.00</span>
+                        <a href="https://arianagrandefragrances.com/products/cloud">Buy now</a>
+                    </div>
+                </li>
+                <li class="fragn3">
+                    <div>
+                        <img src="images/fragn3.png" />
+                        <span>Sweet like candy 30ml<br />$42.00</span>
+                        <a href="https://arianagrandefragrances.com/products/sweet-like-candy">Buy now</a>
+                    </div>
+                </li>
+                <li class="fragn4">
+                    <div>
+                        <img src="images/fragn4.png" />
+                        <span>Ari by Ariana Grande 30ml<br />$42.00</span>
+                        <a href="https://arianagrandefragrances.com/products/ari-by-ariana-grande">Buy now</a>
+                    </div>
+                </li>
+                <li class="fragn5">
+                    <div>
+                        <img src="images/fragn5.png" />
+                        <span>Moonlight 30ml<br />$42.00</span>
+                        <a href="https://arianagrandefragrances.com/products/moonlight">Buy now</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </main>
+    
+    <script>
+        function slowScroll(id) {
+            $('html, body').animate({
+                scrollTop: $(id).offset().top
+            }, 500);
+        }
+
+        $(document).on("scroll", function () {
+            if ($(window).scrollTop() === 0)
+                $("header").removeClass("fixed");
+            else
+                $("header").attr("class", "fixed");
+        })
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#mob-menu').sidr({
+                name: 'sidr',
+                speed: 200,
+                side: 'left',
+                source: null,
+                renaming: true,
+                body: 'body',
+                displace: true,
+                timing: 'ease',
+                method: 'toggle',
+                bind: 'touchstart click',
+                onOpen: function onOpen() { },
+                onClose: function onClose() { },
+                onOpenEnd: function onOpenEnd() { },
+                onCloseEnd: function onCloseEnd() { }
+            });
+        });
+    </script>
+
+
+</body>
+</html>
